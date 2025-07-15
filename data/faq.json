@@ -1,0 +1,26 @@
+[
+  {
+    "question_keywords": ["internship", "internships"],
+    "answer": "You can find internships on LinkedIn, Internshala, or apply directly on company websites."
+  },
+  {
+    "question_keywords": ["cgpa", "gpa", "grade"],
+    "answer": "CGPA stands for Cumulative Grade Point Average. It plays a major role in placements and higher studies."
+  },
+  {
+    "question_keywords": ["ds", "data structure", "dsa", "algorithms"],
+    "answer": "Start with basic data structures like arrays, linked lists, and trees. Use LeetCode or GeeksforGeeks."
+  },
+  {
+    "question_keywords": ["resume", "cv"],
+    "answer": "Keep your resume one page, list key skills, projects, and achievements clearly."
+  },
+  {
+    "question_keywords": ["project", "projects"],
+    "answer": "Try building full-stack or ML projects like chatbots, resume analyzers, or finance trackers."
+  },
+  {
+    "question_keywords": ["hello", "hi"],
+    "answer": "Hello! How can I help you today?"
+  }
+]
