@@ -1,15 +1,16 @@
 import json
+import difflib
 
-# Load the FAQs from JSON
-with open("data/faq.json", "r") as file:
-    faq_data = json.load(file)
+# Load FAQs
+with open('data/faq.json', 'r') as f:
+    faq_data = json.load(f)
 
-def get_bot_response(user_input):
-    user_input = user_input.lower()
+def get_answer(user_question):
+    questions = [faq['question'] for faq in faq_data]
+    best_match = difflib.get_close_matches(user_question, questions, n=1, cutoff=0.5)
 
-    for item in faq_data:
-        for keyword in item["question_keywords"]:
-            if keyword in user_input:
-                return item["answer"]
-
-    return "Sorry, I don't understand that yet. Try asking about internships, CGPA, resume, or DSA."
+    if best_match:
+        for faq in faq_data:
+            if faq['question'] == best_match[0]:
+                return faq['answer']
+    return "Sorry, I couldn't find an answer to that. Please try asking differently."
